@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pizza Box | Maudaha</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<img src="assets/pizza-box-hero.png"
+     alt="The Pizza Box restaurant and chef">
+<style>
+:root {
+  --espresso:#382615;
+  --chocolate:#6E3427;
+  --waffle:#713E18;
+  --cream:#FDEBAA;
+  --peach:#FFBAA5;
+  --pistachio:#C4BE53;
+  --honey:#F4C07D;
+  --paper:#FFF9EC;
+  --muted:#806A58;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;background:var(--paper);color:var(--espresso);
+ font-family:'DM Sans',sans-serif
+}
+a{text-decoration:none;color:inherit}
+header{
+ position:sticky;top:0;z-index:10;
+ background:#fff9eced;backdrop-filter:blur(12px);
+ border-bottom:1px solid #eadbc5
+}
+nav{
+ max-width:1150px;margin:auto;padding:18px 22px;
+ display:flex;justify-content:space-between;align-items:center;gap:15px
+}
+.logo{font:700 23px 'Playfair Display';color:var(--chocolate)}
+.logo small{display:block;font:9px 'DM Sans';letter-spacing:3px}
+.navlinks{display:flex;gap:22px;font-size:12px;color:var(--muted)}
+.btn{
+ display:inline-block;background:var(--chocolate);color:white;
+ padding:13px 19px;border:0;font-weight:700;font-size:12px;
+ cursor:pointer;transition:.2s
+}
+.btn:hover{background:var(--espresso);transform:translateY(-2px)}
+.hero{
+ max-width:1150px;margin:auto;padding:55px 22px 65px;
+ display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center
+}
+.eyebrow{font-size:10px;letter-spacing:3px;color:var(--waffle);font-weight:bold}
+h1,h2,h3{font-family:'Playfair Display',serif}
+h1{font-size:clamp(48px,6vw,78px);line-height:1;margin:18px 0}
+h1 em{color:var(--chocolate);font-weight:500}
+.hero p{color:var(--muted);font-size:14px;line-height:1.9}
+.hero img{width:100%;display:block;box-shadow:14px 14px var(--cream)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.ribbon{background:var(--espresso);color:var(--cream);padding:16px;text-align:center;letter-spacing:3px;font-size:10px}
+section{padding:70px 22px}
+.container{max-width:1150px;margin:auto}
+h2{font-size:clamp(35px,4vw,48px);color:var(--chocolate);margin:10px 0}
+.intro{color:var(--muted);font-size:13px;line-height:1.8;max-width:480px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:25px 0}
+.filter{border:1px solid #d9c3a7;background:none;padding:9px 15px;border-radius:25px;cursor:pointer}
+.filter.active,.filter:hover{background:var(--chocolate);color:white}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.food{background:white;border:1px solid #eee0ca;padding:11px}
+.food img{width:100%;height:190px;object-fit:cover}
+.food h3{font-size:20px;margin:10px 0 5px}
+.food p{font-size:11px;color:var(--muted)}
+.price{font-size:12px;font-weight:bold;color:var(--chocolate)}
+.rating{font-size:11px;color:#967326}
+.addons{background:#f5e7c9}
+.addon-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.addon{background:var(--paper);padding:20px;border-left:3px solid var(--pistachio)}
+.addon b{font:18px 'Playfair Display'}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.story img{width:100%}
+.reviews{background:var(--espresso);color:var(--cream)}
+.reviews h2{color:var(--cream)}
+.form{background:var(--paper);color:var(--espresso);padding:25px;max-width:650px}
+label{display:block;font-size:11px;font-weight:bold;margin:12px 0 6px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #dfcfb8;margin-bottom:10px}
+textarea{min-height:100px}
+.stars button{background:none;border:0;font-size:26px;color:#c6b8a4;cursor:pointer}
+.stars button.active{color:#b18c2d}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-card{background:var(--cream);padding:25px;line-height:1.9}
+.map{background:linear-gradient(135deg,#ead5ae,var(--pistachio));padding:35px;text-align:center}
+footer{background:var(--chocolate);color:var(--cream);text-align:center;padding:35px}
+footer h2{color:var(--cream)}
+@media(max-width:750px){
+ .navlinks{display:none}
+ .hero,.story,.contact{grid-template-columns:1fr}
+ .grid{grid-template-columns:repeat(2,1fr)}
+ .addon-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:500px){
+ .grid{grid-template-columns:1fr}
+ .food img{height:220px}
+}
+</style>
+</head>
+
+<body>
+<header>
+<nav>
+<a class="logo" href="#">THE PIZZA BOX
+<small>MAUDAHA · GOOD FOOD, GOOD MOOD</small></a>
+<div class="navlinks">
+<a href="#menu">Menu</a>
+<a href="#story">Our Story</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
+<a class="btn" href="#menu">Explore Menu</a>
+</nav>
+</header>
+
+<main>
+<div class="hero">
+<div>
+<div class="eyebrow">A LITTLE SLICE OF HAPPINESS</div>
+<h1>Made to be<br><em>shared.</em></h1>
+<p>Pizza, comfort food and little moments worth sharing. Welcome to The Pizza Box, Maudaha.</p>
+<div class="actions">
+<a class="btn" href="#menu">Explore Menu</a>
+<a class="btn" href="#contact">Find Us</a>
+</div>
+</div>
+<div>
+<img src="assets/pizza-box-hero.png" alt="Illustrated Pizza Box building and chef">
+</div>
+</div>
+
+<div class="ribbon">PIZZA · BURGERS · PASTA · SANDWICHES · SWEET TREATS</div>
+
+<section id="menu">
+<div class="container">
+<div class="eyebrow">SOMETHING FOR EVERY CRAVING</div>
+<h2>Explore Our Menu</h2>
+<p class="intro">Discover a selection of food and drinks. Please confirm current availability and prices with the restaurant.</p>
+<div class="filters" id="filters"></div>
+<div class="grid" id="foodGrid"></div>
+<p class="intro">Individual food ratings will be added when genuine dish-wise reviews are available. Prices need confirmation.</p>
+</div>
+</section>
+
+<section class="addons">
+<div class="container">
+<div class="eyebrow">MAKE IT YOUR OWN</div>
+<h2>Little Extras</h2>
+<div class="addon-grid">
+<div class="addon"><b>Extra Cheese</b><p>Price to confirm</p></div>
+<div class="addon"><b>Extra Toppings</b><p>Price to confirm</p></div>
+<div class="addon"><b>Dips & Sauces</b><p>Price to confirm</p></div>
+<div class="addon"><b>Extra Vegetables</b><p>Price to confirm</p></div>
+</div>
+</div>
+</section>
+
+<section id="story">
+<div class="container story">
+<div>
+<div class="eyebrow">A TASTE OF MAUDAHA</div>
+<h2>Made for Good Moments</h2>
+<p class="intro">The Pizza Box is a local pizza and quick-bite restaurant. Customers mention pizza, sandwiches, burgers, pasta, momos, fries, rolls, coffee and shakes.</p>
+<p class="intro">The restaurant's real story and years of experience can be added after confirmation from its owners.</p>
+<h3>4.2 / 5 ★</h3>
+<p class="intro">Overall public listing rating · 231 ratings. Not an individual food rating.</p>
+</div>
+<img src="assets/pizza-box-hero.png" alt="The Pizza Box chef illustration">
+</div>
+</section>
+
+<section class="reviews" id="reviews">
+<div class="container">
+<div class="eyebrow">YOUR EXPERIENCE MATTERS</div>
+<h2>Share Your Feedback</h2>
+<p>Tell us what you tried and how you liked it.</p>
+<form class="form" id="feedbackForm">
+<label>What did you try?</label>
+<select id="foodChoice" required>
+<option value="">Choose food</option>
+<option>Pizza</option><option>Burger</option><option>Sandwich</option>
+<option>Garlic Bread</option><option>Pasta</option><option>Maggi</option>
+<option>Momos</option><option>Rolls</option><option>Fries</option>
+<option>Ice Cream</option><option>Shakes</option><option>Cold Coffee</option>
+</select>
+<label>Your rating</label>
+<div class="stars" id="stars">
+<button type="button" data-star="1">★</button>
+<button type="button" data-star="2">★</button>
+<button type="button" data-star="3">★</button>
+<button type="button" data-star="4">★</button>
+<button type="button" data-star="5">★</button>
+</div>
+<label>Your name (optional)</label>
+<input id="customerName" placeholder="Your name">
+<label>Your feedback</label>
+<textarea id="customerFeedback" required placeholder="Share your experience..."></textarea>
+<button class="btn" type="submit">Submit Feedback</button>
+<p id="formMessage">Demo form: feedback is not sent or stored yet. A secure form service must be connected before launch.</p>
+</form>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="eyebrow">COME SAY HELLO</div>
+<h2>Find Us</h2>
+<div class="contact">
+<div class="contact-card">
+<h3>The Pizza Box, Maudaha</h3>
+<b>Address</b><br>
+Noor Complex, beside Post Office, Kagzi Mohalla, Upraus, Maudaha, Hamirpur, Uttar Pradesh 210507, India.
+<br><br>
+<b>Phone / WhatsApp</b><br>
++91 76100 00679
+<br><br>
+<b>Opening Hours</b><br>
+Listed: 10 AM – 10 PM daily. Please confirm before visiting.
+<br><br>
+<a class="btn" href="tel:+917610000679">Call Now</a>
+<a class="btn" href="https://wa.me/917610000679" target="_blank">WhatsApp</a>
+</div>
+<div class="map">
+<h3>⌖ The Pizza Box</h3>
+<p>Near Post Office, Maudaha</p>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&query=The+Pizza+Box+Noor+Complex+Maudaha" target="_blank">Open Google Maps</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<h2>THE PIZZA BOX</h2>
+<p>MAUDAHA · GOOD FOOD, GOOD MOOD</p>
+<p>Sample website concept · Details to be approved by restaurant</p>
+</footer>
+
+<script>
+const dishes=[
+["Veg Pizza","Pizza","https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700","Fresh vegetable pizza."],
+["Paneer Pizza","Pizza","https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=700","Paneer pizza option."],
+["Cheese Pizza","Pizza","https://images.unsplash.com/photo-1579751626657-72bc17010498?w=700","Cheesy pizza."],
+["Veg Burger","Burgers","https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700","Classic burger."],
+["Sandwich","Sandwiches","https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=700","Grilled sandwich."],
+["Pasta","Pasta","https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=700","Pasta varieties."],
+["Garlic Bread","Sides","https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?w=700","Garlic bread."],
+["French Fries","Sides","https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=700","Crispy fries."],
+["Momos","Snacks","https://images.unsplash.com/photo-1563245372-f21724e3856d?w=700","Momos."],
+["Maggi","Snacks","https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=700","Noodle bowl."],
+["Rolls","Snacks","https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=700","Quick snack rolls."],
+["Lava Cake","Desserts","https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=700","Chocolate dessert."],
+["Ice Cream","Desserts","https://images.unsplash.com/photo-1501446529957-6226bd447c46?w=700","Ice cream."],
+["Shakes","Drinks","https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=700","Milkshakes."],
+["Cold Coffee","Drinks","https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=700","Cold coffee."],
+["Iced Tea","Drinks","https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=700","Refreshing iced tea."]
+];
+const categories=["All","Pizza","Burgers","Sandwiches","Pasta","Sides","Snacks","Desserts","Drinks"];
+let selected="All";
+const filters=document.getElementById("filters");
+const grid=document.getElementById("foodGrid");
+
+function showMenu(){
+ filters.innerHTML=categories.map(c=>
+ `<button class="filter ${c===selected?'active':''}" data-cat="${c}">${c}</button>`).join("");
+ grid.innerHTML=dishes.filter(d=>selected==="All"||d[1]===selected).map(d=>
+ `<article class="food">
+ <img src="${d[2]}" alt="${d[0]}" loading="lazy">
+ <h3>${d[0]}</h3><p>${d[3]}</p>
+ <div class="price">Price: Call to confirm</div>
+ <p class="rating">☆ No individual rating yet</p>
+ </article>`).join("");
+}
+filters.addEventListener("click",e=>{
+ if(e.target.dataset.cat){selected=e.target.dataset.cat;showMenu();}
+});
+showMenu();
+
+let rating=0;
+document.querySelectorAll("[data-star]").forEach(btn=>{
+ btn.addEventListener("click",()=>{
+ rating=Number(btn.dataset.star);
+ document.querySelectorAll("[data-star]").forEach(s=>
+ s.classList.toggle("active",Number(s.dataset.star)<=rating));
+ });
+});
+document.getElementById("feedbackForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ document.getElementById("formMessage").textContent=
+ rating ? "Thank you! This preview form does not send or store feedback yet."
+ : "Please choose a star rating first.";
+});
+</script>
+</body>
+</html>
